@@ -1,4 +1,4 @@
-module github.com/ReneKroon/ttlcache
+module github.com/khaibin/ttlcache
 
 go 1.12
 

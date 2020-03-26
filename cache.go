@@ -259,7 +259,7 @@ func (cache *Cache) Purge() {
 }
 
 // NewCache is a helper to create instance of the Cache struct
-func NewCache() *Cache {
+func NewCache(duration time.Duration) *Cache {
 
 	shutdownChan := make(chan chan struct{})
 
@@ -271,7 +271,9 @@ func NewCache() *Cache {
 		shutdownSignal:         shutdownChan,
 		isShutDown:             false,
 	}
+
 	go cache.startExpirationProcessing()
+	cache.SetTTL(duration)
 	return cache
 }
 

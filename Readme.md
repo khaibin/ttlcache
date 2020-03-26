@@ -11,7 +11,7 @@ TTLCache is a simple key/value cache in golang with the following functions:
 
 Note (issue #25): by default, due to historic reasons, the TTL will be reset on each cache hit and you need to explicitly configure the cache to use a TTL that will not get extended.
 
-[![Build Status](https://travis-ci.org/ReneKroon/ttlcache.svg?branch=master)](https://travis-ci.org/ReneKroon/ttlcache)
+[![Build Status](https://travis-ci.org/khaibin/ttlcache.svg?branch=master)](https://travis-ci.org/khaibin/ttlcache)
 
 #### Usage
 ```go
@@ -19,7 +19,7 @@ import (
   "time"
   "fmt"
 
-  "github.com/ReneKroon/ttlcache"
+  "github.com/khaibin/ttlcache"
 )
 
 func main () {
